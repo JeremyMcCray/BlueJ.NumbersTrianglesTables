@@ -1,21 +1,57 @@
- 
+
 
 public class TriangleUtilities {
 
     public static String getRow(int numberOfStars) {
-        return null;
-    }
-    
+      String solu = "";
+
+        for(int i=0;i<numberOfStars;i++){
+            solu+= "*";
+        }
+        return solu;
+      }
+
+
+
+
     public static String getTriangle(int numberOfRows) {
-        return null;
+      String solu = "";
+
+      for(int i=0;i<numberOfRows;i++){
+
+        for (int j=0;j<=i;j++){
+          solu+= "*";
+          if(i==j){
+          solu+="\n";
+          }
+        }
+
+      }
+        return solu;
     }
 
 
     public static String getSmallTriangle() {
-        return null;
+      TriangleUtilities test1 = new TriangleUtilities();
+      String solu = test1.getTriangle(4);
+      return solu;
+
     }
 
     public static String getLargeTriangle() {
-        return null;
+      String solu = "";
+
+      for(int i=0;i<9;i++){
+
+        for (int j=0;j<=i;j++){
+          solu+= "*";
+          if(i==j){
+          solu+="\n";
+          }
+        }
+
+      }
+        return solu;
+
     }
 }
